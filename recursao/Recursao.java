@@ -34,8 +34,8 @@ public class Recursao {
 
 
     private static int converte(String b) {
-        if(b.length() == 0 || b.charAt(0) == '0') return 0;
-        return (int) (Math.pow(2, b.length() - 1) + converte(b.substring(1)));
+        if(b.length() == 0) return 0;
+        return (int) (Math.pow(2, b.length() - 1) *  (b.charAt(0) - 48) + converte(b.substringing(1)));
 
     }
 

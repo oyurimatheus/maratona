@@ -27,8 +27,8 @@ def mdc(x, y):
             return x
 
 def converte(b):
-    if len(b) == 0 or b[0] == '0': return 0
-    return 2 ** (len(b) - 1) + converte(b[1:])
+    if len(b) == 0: return 0
+    return 2 ** (len(b) - 1) * int(b[0]) + converte(b[1:])
 
 if __name__ == '__main__':
     main()
